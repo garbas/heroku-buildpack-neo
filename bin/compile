@@ -19,14 +19,15 @@ export_env_dir() {
 
 export_env_dir "$env_dir"
 
-echo "-----> Running: neo build"
 cd "$build_dir"
 
 # run prepublish 
 if [ ! -d node_modules/mozilla-neo/build ]; then
+    echo "-----> Running: building mozilla-neo"
     cd node_modules/mozilla-neo
     npm install
     cd ../..
 fi
 
+echo "-----> Running: neo build"
 node_modules/.bin/neo build
