@@ -24,6 +24,8 @@ cd "$build_dir"
 # run prepublish 
 if [ ! -d node_modules/mozilla-neo/build ]; then
     echo "-----> Running: building mozilla-neo"
+    rm -rf node_modules/mozilla-neo
+    git clone git://github.com/garbas/neo.git node_modules/mozilla-neo
     cd node_modules/mozilla-neo
     npm install
     cd ../..
