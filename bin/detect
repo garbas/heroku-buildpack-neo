@@ -1,5 +1,5 @@
 #!/bin/bash
-if [ -f $1/node_modules/.bin/neo ]; then
+if [ -d $1/node_modules/mozilla-neo ]; then
     echo "Neo"
     exit 0
 else
