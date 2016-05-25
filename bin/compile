@@ -24,9 +24,8 @@ cd "$build_dir"
 
 # run prepublish 
 if [ ! -d node_modules/mozilla-neo/build ]; then
-    export PATH=$PWD/node_modules/.bin:$PATH
     cd node_modules/mozilla-neo
-    npm run prepublish
+    npm install
     cd ../..
 fi
 
